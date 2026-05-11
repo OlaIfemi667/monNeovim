@@ -31,6 +31,10 @@ require("lazy").setup({
       vim.keymap.set("n", "<leader>ff", tb.find_files)
       vim.keymap.set("n", "<leader>fg", tb.live_grep)
       vim.keymap.set("n", "<leader>fb", tb.buffers)
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+      vim.keymap.set("n", "K", vim.lsp.buf.hover)
+      vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
     end,
   },
 
@@ -79,6 +83,7 @@ require("lazy").setup({
       })
     end,
   },
+
 
   -- =========================
   -- ⚡ Autocomplétion
